@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "323040436593",
+    "project_id": "franchiseapp-2633f",
+    "storage_bucket": "franchiseapp-2633f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323040436593:android:8df9149b0914daa6fed6d0",
+        "android_client_info": {
+          "package_name": "com.taqreeri.checkfranch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323040436593-tfaoh2c0jqfc2mas3msmm5fojbpf1me1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsFuM2XYlOr9f0CGJ9ptaS1PEFkeu7XuI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "323040436593-tfaoh2c0jqfc2mas3msmm5fojbpf1me1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

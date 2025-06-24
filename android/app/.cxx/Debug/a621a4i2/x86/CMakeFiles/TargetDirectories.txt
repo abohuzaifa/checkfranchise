@@ -1,0 +1,2 @@
+C:/Users/pc/StudioProjects/franchise/android/app/.cxx/Debug/a621a4i2/x86/CMakeFiles/edit_cache.dir
+C:/Users/pc/StudioProjects/franchise/android/app/.cxx/Debug/a621a4i2/x86/CMakeFiles/rebuild_cache.dir

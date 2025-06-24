@@ -1,0 +1,2 @@
+/Users/khalid/StudioProjects/franchise/android/app/.cxx/RelWithDebInfo/354r383z/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/khalid/StudioProjects/franchise/android/app/.cxx/RelWithDebInfo/354r383z/arm64-v8a/CMakeFiles/rebuild_cache.dir

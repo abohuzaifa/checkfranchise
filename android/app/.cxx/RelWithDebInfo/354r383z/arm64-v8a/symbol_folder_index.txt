@@ -1,0 +1,1 @@
+/Users/khalid/StudioProjects/franchise/build/app/intermediates/cxx/RelWithDebInfo/354r383z/obj/arm64-v8a

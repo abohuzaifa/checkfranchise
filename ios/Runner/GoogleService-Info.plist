@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAlP1lx8oGbc7rbVtq4pwT_9S5CQSGlCbk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>323040436593</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ios.taqreeri.franchiseApp</string>
+	<key>PROJECT_ID</key>
+	<string>franchiseapp-2633f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>franchiseapp-2633f.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:323040436593:ios:5a2899854e0bcbf6fed6d0</string>
+</dict>
+</plist>

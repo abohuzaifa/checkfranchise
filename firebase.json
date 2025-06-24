@@ -1,0 +1,21 @@
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "franchiseapp-2633f",
+                    "appId": "1:323040436593:android:508bb942d6c67bbefed6d0",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "franchiseapp-2633f",
+                    "configurations": {
+                        "android": "1:323040436593:android:508bb942d6c67bbefed6d0"
+                    }
+                }
+            }
+        }
+    }
+}
