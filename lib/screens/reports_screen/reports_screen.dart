@@ -243,28 +243,44 @@ class _ReportsScreenState extends State<ReportsScreen> {
                                               children: [
                                                 Row(
                                                   children: [
-                                                    Text(
-                                                      (getReportListController.reportData[index]['branch']?['branch_name'] ?? '')
-                                                          .toString()
-                                                          .trim()
-                                                          .isEmpty
-                                                          ? 'Name Not Available'
-                                                          : getReportListController.reportData[index]['branch']['branch_name']
-                                                          .toString(),
-                                                      overflow: TextOverflow.ellipsis,
-                                                      maxLines: 1,
-                                                      style: const TextStyle(
-                                                        fontSize: 19,
-                                                        fontWeight: FontWeight.w600,
-                                                        fontFamily: 'Alexandria',
-                                                        color: Color(0xff1F5077),
+                                                    Expanded(
+                                                      // ← Added this
+                                                      child: Text(
+                                                        (getReportListController.reportData[index]
+                                                                            [
+                                                                            'branch']
+                                                                        ?[
+                                                                        'branch_name'] ??
+                                                                    '')
+                                                                .toString()
+                                                                .trim()
+                                                                .isEmpty
+                                                            ? 'Name Not Available'
+                                                            : getReportListController
+                                                                .reportData[
+                                                                    index]
+                                                                    ['branch'][
+                                                                    'branch_name']
+                                                                .toString(),
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
+                                                        maxLines: 1,
+                                                        style: const TextStyle(
+                                                          fontSize: 19,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontFamily:
+                                                              'Alexandria',
+                                                          color:
+                                                              Color(0xff1F5077),
+                                                        ),
                                                       ),
                                                     ),
-                                                    const Spacer(),
                                                     GestureDetector(
                                                       onTap: () {
                                                         setState(() {
-                                                          if (checkIndex == index) {
+                                                          if (checkIndex ==
+                                                              index) {
                                                             checkIndex = -1;
                                                           } else {
                                                             checkIndex = index;
@@ -274,15 +290,23 @@ class _ReportsScreenState extends State<ReportsScreen> {
                                                       child: Container(
                                                         height: 35,
                                                         width: 35,
-                                                        decoration: const BoxDecoration(
-                                                          image: DecorationImage(
-                                                            image: AssetImage("assets/images/circle_img.png"),
+                                                        decoration:
+                                                            const BoxDecoration(
+                                                          image:
+                                                              DecorationImage(
+                                                            image: AssetImage(
+                                                                "assets/images/circle_img.png"),
                                                           ),
                                                         ),
                                                         child: Padding(
-                                                          padding: EdgeInsets.only(bottom: h * 0.004),
+                                                          padding:
+                                                              EdgeInsets.only(
+                                                                  bottom: h *
+                                                                      0.004),
                                                           child: Icon(
-                                                            checkIndex == index ? Icons.remove : Icons.add,
+                                                            checkIndex == index
+                                                                ? Icons.remove
+                                                                : Icons.add,
                                                             color: Colors.white,
                                                           ),
                                                         ),
@@ -374,7 +398,8 @@ class _ReportsScreenState extends State<ReportsScreen> {
                                                               ),
                                                               GestureDetector(
                                                                 onTap: () {
-                                                                  print("getReportListController.reportData[index]['id']========${getReportListController.reportData[index]['id'].toString()}");
+                                                                  print(
+                                                                      "getReportListController.reportData[index]['id']========${getReportListController.reportData[index]['id'].toString()}");
                                                                   reportResultViewController.reportResultViewFunction(getReportListController
                                                                       .reportData[
                                                                           index]
