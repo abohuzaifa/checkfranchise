@@ -157,66 +157,66 @@ class _SignupViewState extends State<SignupView> {
                                   ),
 
                                   // Password TextField Container
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(50),
-                                      color: const Color(0xFFF3F7FC),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: Colors.grey
-                                              .withOpacity(0.5), // Shadow color
-                                          spreadRadius: 0, // Spread radius
-                                          blurRadius: 2, // Blur radius
-                                          offset: Offset(0,
-                                              2), // Shadow appears at the bottom
-                                        ),
-                                      ],
-                                    ),
-                                    height: h * 0.06,
-                                    margin: EdgeInsets.only(
-                                        top: h * 0.025,
-                                        left: w * 0.05,
-                                        right: w * 0.05),
-                                    padding: EdgeInsets.only(
-                                        top: h * 0.005,
-                                        bottom: h * 0.005,
-                                        left: w * 0.05,
-                                        right: w * 0.05),
-                                    child: Row(
-                                      children: [
-                                        // Email Icon
-                                        Image.asset(
-                                          'assets/images/phone.png',
-                                          width: h * 0.025,
-                                        ),
-                                        SizedBox(width: w * 0.02),
-                                        Container(
-                                          height: h * 0.03,
-                                          width: 1,
-                                          color: Colors.grey[300],
-                                        ),
-                                        SizedBox(width: w * 0.02),
-                                        Expanded(
-                                          child: TextField(
-                                            controller: mobileController,
-                                            keyboardType: TextInputType.number,
-                                            decoration: InputDecoration(
-                                              contentPadding: EdgeInsets.only(
-                                                  bottom: h * 0.01),
-                                              hintText: 'phoneNumber'.tr,
-                                              hintStyle: TextStyle(
-                                                fontFamily: 'Alexandria',
-                                                color: const Color(0xFF507780),
-                                                fontSize: 17,
-                                                fontWeight: FontWeight.w300,
-                                              ),
-                                              border: InputBorder.none,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
+                                  // Container(
+                                  //   decoration: BoxDecoration(
+                                  //     borderRadius: BorderRadius.circular(50),
+                                  //     color: const Color(0xFFF3F7FC),
+                                  //     boxShadow: [
+                                  //       BoxShadow(
+                                  //         color: Colors.grey
+                                  //             .withOpacity(0.5), // Shadow color
+                                  //         spreadRadius: 0, // Spread radius
+                                  //         blurRadius: 2, // Blur radius
+                                  //         offset: Offset(0,
+                                  //             2), // Shadow appears at the bottom
+                                  //       ),
+                                  //     ],
+                                  //   ),
+                                  //   height: h * 0.06,
+                                  //   margin: EdgeInsets.only(
+                                  //       top: h * 0.025,
+                                  //       left: w * 0.05,
+                                  //       right: w * 0.05),
+                                  //   padding: EdgeInsets.only(
+                                  //       top: h * 0.005,
+                                  //       bottom: h * 0.005,
+                                  //       left: w * 0.05,
+                                  //       right: w * 0.05),
+                                  //   child: Row(
+                                  //     children: [
+                                  //       // Email Icon
+                                  //       Image.asset(
+                                  //         'assets/images/phone.png',
+                                  //         width: h * 0.025,
+                                  //       ),
+                                  //       SizedBox(width: w * 0.02),
+                                  //       Container(
+                                  //         height: h * 0.03,
+                                  //         width: 1,
+                                  //         color: Colors.grey[300],
+                                  //       ),
+                                  //       // SizedBox(width: w * 0.02),
+                                  //       // Expanded(
+                                  //       //   child: TextField(
+                                  //       //     controller: mobileController,
+                                  //       //     keyboardType: TextInputType.number,
+                                  //       //     decoration: InputDecoration(
+                                  //       //       contentPadding: EdgeInsets.only(
+                                  //       //           bottom: h * 0.01),
+                                  //       //       hintText: 'phoneNumber'.tr,
+                                  //       //       hintStyle: TextStyle(
+                                  //       //         fontFamily: 'Alexandria',
+                                  //       //         color: const Color(0xFF507780),
+                                  //       //         fontSize: 17,
+                                  //       //         fontWeight: FontWeight.w300,
+                                  //       //       ),
+                                  //       //       border: InputBorder.none,
+                                  //       //     ),
+                                  //       //   ),
+                                  //       // ),
+                                  //     ],
+                                  //   ),
+                                  // ),
                                   Container(
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(50),
@@ -432,21 +432,22 @@ class _SignupViewState extends State<SignupView> {
                                           colorText: Colors.white,
                                         );
                                       }
-                                      if (mobileController.text.isEmpty) {
-                                        Get.snackbar(
-                                          'message'.tr,
-                                          'enterYourPhoneNumber'.tr,
-                                          snackPosition: SnackPosition.TOP,
-                                          backgroundColor: Color(0xff1F5077),
-                                          colorText: Colors.white,
-                                        );
-                                      } else {
+                                      // if (mobileController.text.isEmpty) {
+                                      //   Get.snackbar(
+                                      //     'message'.tr,
+                                      //     'enterYourPhoneNumber'.tr,
+                                      //     snackPosition: SnackPosition.TOP,
+                                      //     backgroundColor: Color(0xff1F5077),
+                                      //     colorText: Colors.white,
+                                      //   );
+                                      //   }
+                                      else {
                                         signupController.signupFunction(
-                                            passwordController.text,
-                                            mobileController.text,
-                                            nameController.text,
-                                            cPasswordController.text,
-                                            emailController.text);
+                                          passwordController.text,
+                                          nameController.text,
+                                          cPasswordController.text,
+                                          emailController.text,
+                                        );
                                       }
                                     },
                                     child: Container(

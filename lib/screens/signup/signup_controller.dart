@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:math';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:franchise_app/constants/app_constants.dart';
@@ -13,20 +14,27 @@ class SignupController extends GetxController {
   RxBool isloading = false.obs;
 
   Future<void> signupFunction(
-    String password,
-    String mobile,
-    String name,
-    String cPassword,
-    String email,
-  ) async {
+      String password,
+      String name,
+      String cPassword,
+      String email,
+      ) async {
     print("Function is running");
     isloading(true);
+
+    // Generate a random 10-digit phone number
+    String generateRandomPhoneNumber() {
+      final random = Random();
+      return '9${random.nextInt(900000000) + 100000000}'; // Generates 9XXXXXXXXX
+    }
+
+    final String mobile = generateRandomPhoneNumber(); // Generate dummy number
 
     // Creating the request body
     Map<String, String> requestBody = {
       "name": name.toString(),
       "email": email.toString(),
-      "mobile": mobile.toString(),
+      "mobile": mobile.toString(), // Using generated number
       "password": password.toString(),
       "password_confirmation": cPassword.toString(),
       "user_type": "1",
@@ -35,17 +43,18 @@ class SignupController extends GetxController {
 
     // Printing the request body
     print("Request Body: ${jsonEncode(requestBody)}");
+    print("Generated Phone: $mobile"); // Log the generated number
 
     try {
       final http.Response response = await http
           .post(
-            Uri.parse("${AppConstants.baseUrl}register"),
-            headers: {
-              'Accept': 'application/json',
-            },
-            body: requestBody,
-          )
-          .timeout(Duration(seconds: 10)); // Set timeout duration here
+        Uri.parse("${AppConstants.baseUrl}register"),
+        headers: {
+          'Accept': 'application/json',
+        },
+        body: requestBody,
+      )
+          .timeout(Duration(seconds: 10));
 
       print("Response Body: ${response.body}");
       var responseData = jsonDecode(response.body);
@@ -62,7 +71,7 @@ class SignupController extends GetxController {
         GetStorage().write("mobile", mobile);
 
         Get.offAll(
-          () => OtpView(
+              () => OtpView(
             isCheck: true,
             email: email,
           ),
