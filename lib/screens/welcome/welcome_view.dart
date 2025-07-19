@@ -144,50 +144,50 @@ class _WelcomeViewState extends State<WelcomeView> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       // Sign Up Container
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => SignupView()),
-                          );
-                        },
-                        child: Container(
-                          height: h * 0.06,
-                          width: w * 0.38,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [Color(0xFF19B2E7), Color(0xFF1A9ED0)],
-                              // Gradient colors
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                            ),
-                            borderRadius: BorderRadius.circular(25),
-                            // Rounded corners
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color(0xFFFFFFFF),
-                                // Semi-transparent black (adjust the opacity as needed)
-                                offset: Offset(1, 1),
-                                // X and Y offset (1px each)
-                                blurRadius: 2,
-                                // Blur radius (2px)
-                                spreadRadius: 0, // Spread radius (0px)
-                              ),
-                            ],
-                          ),
-                          child: Text(
-                            'signUp'.tr,
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500, // Font weight of 500
-                              fontSize: 18, // Font size of 22px
-                              color:
-                                  Colors.white, // Text color white for contrast
-                            ),
-                          ),
-                        ),
-                      ),
+                      // InkWell(
+                      //   onTap: () {
+                      //     Navigator.push(
+                      //       context,
+                      //       MaterialPageRoute(
+                      //           builder: (context) => SignupView()),
+                      //     );
+                      //   },
+                      //   child: Container(
+                      //     height: h * 0.06,
+                      //     width: w * 0.38,
+                      //     alignment: Alignment.center,
+                      //     decoration: BoxDecoration(
+                      //       gradient: LinearGradient(
+                      //         colors: [Color(0xFF19B2E7), Color(0xFF1A9ED0)],
+                      //         // Gradient colors
+                      //         begin: Alignment.topCenter,
+                      //         end: Alignment.bottomCenter,
+                      //       ),
+                      //       borderRadius: BorderRadius.circular(25),
+                      //       // Rounded corners
+                      //       boxShadow: [
+                      //         BoxShadow(
+                      //           color: Color(0xFFFFFFFF),
+                      //           // Semi-transparent black (adjust the opacity as needed)
+                      //           offset: Offset(1, 1),
+                      //           // X and Y offset (1px each)
+                      //           blurRadius: 2,
+                      //           // Blur radius (2px)
+                      //           spreadRadius: 0, // Spread radius (0px)
+                      //         ),
+                      //       ],
+                      //     ),
+                      //     child: Text(
+                      //       'signUp'.tr,
+                      //       style: TextStyle(
+                      //         fontWeight: FontWeight.w500, // Font weight of 500
+                      //         fontSize: 18, // Font size of 22px
+                      //         color:
+                      //             Colors.white, // Text color white for contrast
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ),
 
                       // Login Container
                       InkWell(
